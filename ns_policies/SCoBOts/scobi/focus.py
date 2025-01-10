@@ -4,8 +4,8 @@ import numpy as np
 import math
 from pathlib import Path
 from itertools import permutations
-from scobi.concepts import init as concept_init
-from scobi.utils.decorators import FUNCTIONS
+from ns_policies.SCoBOts.scobi.concepts import init as concept_init
+from ns_policies.SCoBOts.scobi.utils.decorators import FUNCTIONS
 from termcolor import colored
 
 class Focus():

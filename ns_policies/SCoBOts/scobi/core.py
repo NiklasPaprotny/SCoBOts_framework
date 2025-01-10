@@ -1,10 +1,10 @@
 """scobi core"""
 import numpy as np
 from gymnasium import spaces, Env
-import scobi.environments.env_manager as em
-from scobi.utils.game_object import get_wrapper_class
-from scobi.focus import Focus
-from scobi.utils.logging import Logger
+from ns_policies.SCoBOts.scobi.environments import env_manager as em
+from ns_policies.SCoBOts.scobi.utils.game_object import get_wrapper_class
+from ns_policies.SCoBOts.scobi.focus import Focus
+from ns_policies.SCoBOts.scobi.utils.logging import Logger
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from copy import deepcopy

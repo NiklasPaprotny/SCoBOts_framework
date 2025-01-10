@@ -3,7 +3,7 @@
 # Mac OS
 .DS_Store
 # PyCharm
-.idea/
+../../.idea/
 .vscode/
 
 # Byte-compiled / optimized / DLL files

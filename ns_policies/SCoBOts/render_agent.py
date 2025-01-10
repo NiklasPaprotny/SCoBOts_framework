@@ -3,7 +3,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.atari_wrappers import WarpFrame
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
-from scobi import Environment
+from scobi.core import Environment
 from utils.parser.parser import render_parser, get_highest_version
 from utils.renderer import Renderer
 from viper_extract import DTClassifierModel
@@ -55,7 +55,7 @@ def main():
     checkpoint_str = "best_model" # "model_5000000_steps" #"best_model"
     vecnorm_str = "best_vecnormalize.pkl"
     model_path = Path("resources/checkpoints", exp_name, checkpoint_str)
-    vecnorm_path = Path("resources/checkpoints",  exp_name, vecnorm_str)
+    vecnorm_path = Path("resources/checkpoints", exp_name, vecnorm_str)
     ff_file_path = Path("resources/checkpoints", exp_name)
     EVAL_ENV_SEED = 84
     if not _ensure_completeness(ff_file_path):

@@ -1,10 +1,8 @@
 # game object interface
 # switch depending on object extractor
 # only ocatari implemented for now
-from scobi.utils.interfaces import GameObjectInterface
-from typing import Tuple
+from ns_policies.SCoBOts.scobi.utils.interfaces import GameObjectInterface
 from ocatari.ram.game_objects import GameObject as Ocatari_GameObject
-import numpy as np
 import os
 
 

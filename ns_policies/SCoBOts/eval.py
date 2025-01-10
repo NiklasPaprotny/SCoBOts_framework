@@ -13,8 +13,6 @@ from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
 from joblib import load
 from viper_extract import DTClassifierModel
 
-
-import utils.parser.parser
 from scobi import Environment
 
 
@@ -80,7 +78,7 @@ def _add_eval_modelcard(path, episodes, mean, std):
 def main():
     parser = argparse.ArgumentParser()
 
-    flag_dictionary = utils.parser.parser.parse_eval(parser)
+    flag_dictionary = ns_policies.SCoBOts.utils.parser.parser.parse_eval(parser)
     version = int(flag_dictionary["version"])
     exp_name = flag_dictionary["exp_name"]
     variant = flag_dictionary["variant"]
@@ -92,7 +90,7 @@ def main():
     time = int(flag_dictionary["times"])
 
     if version == -1:
-        version = utils.parser.parser.get_highest_version(exp_name)
+        version = ns_policies.SCoBOts.utils.parser.parser.get_highest_version(exp_name)
     elif version == 0:
         version = ""
 
@@ -100,7 +98,7 @@ def main():
     checkpoint_str = "best_model" # "model_5000000_steps" #"best_model"
     vecnorm_str = "best_vecnormalize.pkl"
     model_path = Path("resources/checkpoints", exp_name, checkpoint_str)
-    vecnorm_path = Path("resources/checkpoints",  exp_name, vecnorm_str)
+    vecnorm_path = Path("resources/checkpoints", exp_name, vecnorm_str)
     ff_file_path = Path("resources/checkpoints", exp_name)
     if not _ensure_completeness(ff_file_path):
         print('Training not completed!')

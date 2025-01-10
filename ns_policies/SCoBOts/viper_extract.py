@@ -134,7 +134,7 @@ def main():
         focus_dir = Path(opts.input)
     else:
         model_path = Path("resources/checkpoints", checkpoint_name, checkpoint_str)
-        vecnorm_path = Path("resources/checkpoints",  checkpoint_name, vecnorm_str)
+        vecnorm_path = Path("resources/checkpoints", checkpoint_name, vecnorm_str)
     print("Looking for focus file in " + str(focus_dir))
     print("Looking for model in " + str(model_path))
     output_path = Path("resources/viper_extracts/extract_output", checkpoint_name + "-" + expname)

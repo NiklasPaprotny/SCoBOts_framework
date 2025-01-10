@@ -1,7 +1,6 @@
 import os
 import shutil
 from collections import deque
-from datetime import datetime
 from pathlib import Path
 from typing import Callable
 
@@ -20,7 +19,6 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize, VecTransposeImage
 
-import utils.parser.parser
 from scobi import Environment
 from utils.model_card import ModelCard
 
@@ -104,7 +102,7 @@ def _get_directory(path, exp_name):
         version_counter += 1
 
 def main():
-    flags_dictionary = utils.parser.parser.parse_train()
+    flags_dictionary = ns_policies.SCoBOts.utils.parser.parser.parse_train()
 
     exp_name = flags_dictionary["exp_name"]
     n_envs = int(flags_dictionary["environments"])
