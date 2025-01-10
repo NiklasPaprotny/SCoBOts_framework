@@ -1,7 +1,7 @@
 from colormath import color_diff_matrix
 from colormath.color_objects import sRGBColor, LabColor
 from colormath.color_conversions import convert_color
-import ns_policies.SCoBOts.scobi.utils.color_dicts as cdicts
+import scobi.utils.color_dicts as cdicts
 import numpy as np
 
 # TODO: RF: is this copypaste from colormath?

@@ -1,7 +1,7 @@
 # game object interface
 # switch depending on object extractor
 # only ocatari implemented for now
-from ns_policies.SCoBOts.scobi.utils.interfaces import GameObjectInterface
+from scobi.utils.interfaces import GameObjectInterface
 from ocatari.ram.game_objects import GameObject as Ocatari_GameObject
 import os
 

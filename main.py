@@ -1,2 +1,2 @@
-from ns_policies.SCoBOts import render_agent
+from . import render_agent
 

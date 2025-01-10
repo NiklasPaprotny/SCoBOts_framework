@@ -8,7 +8,7 @@ from sklearn.tree import DecisionTreeClassifier
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
 
-from scobi import Environment
+from scobi.core import Environment
 from utils.viper import VIPER
 
 EVAL_ENV_SEED = 84
