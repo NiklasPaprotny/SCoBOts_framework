@@ -54,13 +54,13 @@ def main():
 
     checkpoint_str = "best_model" # "model_5000000_steps" #"best_model"
     vecnorm_str = "best_vecnormalize.pkl"
-    model_path = Path("resources/checkpoints", exp_name, checkpoint_str)
-    vecnorm_path = Path("resources/checkpoints",  exp_name, vecnorm_str)
-    ff_file_path = Path("resources/checkpoints", exp_name)
+    model_path = Path("./ns_policies/SCoBOts_framework/resources/checkpoints", exp_name, checkpoint_str)
+    vecnorm_path = Path("./ns_policies/SCoBOts_framework/resources/checkpoints",  exp_name, vecnorm_str)
+    ff_file_path = Path("./ns_policies/SCoBOts_framework/resources/checkpoints", exp_name)
     EVAL_ENV_SEED = 84
-    if not _ensure_completeness(ff_file_path):
-        print("The folder " + str(ff_file_path) + " does not contain a completed training checkpoint.")
-        return
+    #if not _ensure_completeness(ff_file_path):
+    #    print("The folder " + str(ff_file_path) + " does not contain a completed training checkpoint.")
+    #    return
     if variant == "rgb":
         env = make_vec_env(env_str, seed=EVAL_ENV_SEED, wrapper_class=WarpFrame)
     else:

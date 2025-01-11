@@ -11,7 +11,7 @@ from copy import deepcopy
 
 
 class Environment(Env):
-    def __init__(self, env_name, seed=None, focus_dir="resources/focusfiles", focus_file=None, reward=0, hide_properties=False, silent=False, refresh_yaml=True, draw_features=False, hud=False):
+    def __init__(self, env_name, seed=None, focus_dir="./ns_policies/SCoBOts_framework/resources/focusfiles", focus_file=None, reward=0, hide_properties=False, silent=False, refresh_yaml=True, draw_features=False, hud=False):
         self.logger = Logger(silent=silent)
         # set buffer_window=2, s.t. we can build POSITION_HISTORY properties, which are needed by all envs.
         self.oc_env = em.make(env_name, self.logger, hud=hud, buffer_window_size=2)

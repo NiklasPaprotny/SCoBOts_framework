@@ -242,7 +242,7 @@ def get_highest_version(agent):
     highest_version = 1
     version_pattern = re.compile(rf"{exp_name}-n(\d+)")  # Regex to match 'exp_name-versionX'
 
-    for directory in Path("resources/checkpoints").iterdir():
+    for directory in Path("./ns_policies/SCoBOts_framework/resources/checkpoints").iterdir():
         if directory.is_dir():  # Ensure it's a directory
             match = version_pattern.match(directory.name)
             if match:
