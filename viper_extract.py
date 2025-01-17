@@ -9,7 +9,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
 
 from scobi import Environment
-from utils.viper import VIPER
+from ns_policies.SCoBOts_framework.utils.viper import VIPER
 
 EVAL_ENV_SEED = 84
 

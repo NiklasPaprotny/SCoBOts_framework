@@ -4,8 +4,8 @@ from stable_baselines3.common.atari_wrappers import WarpFrame
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
 from scobi import Environment
-from utils.parser.parser import render_parser, get_highest_version
-from utils.renderer import Renderer
+from ns_policies.SCoBOts_framework.utils.parser.parser import render_parser, get_highest_version
+from ns_policies.SCoBOts_framework.utils.renderer import Renderer
 from viper_extract import DTClassifierModel
 from joblib import load
 
