@@ -2,7 +2,7 @@
 import math
 from typing import Tuple
 import numpy as np
-# from scobi.utils.game_object import get_wrapper_class
+# from scobi.framework_utils.game_object import get_wrapper_class
 from scobi.utils.colors import get_closest_color
 from scobi.utils.decorators import register
 COLOR_INT_MEMORY = {}
